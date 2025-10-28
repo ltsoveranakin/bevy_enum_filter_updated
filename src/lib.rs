@@ -13,7 +13,7 @@ pub mod prelude {
     pub use super::filter_trait::EnumFilter;
     pub use bevy_enum_filter_derive::{Enum, EnumFilter};
 }
-//
+
 // #[cfg(test)]
 // mod tests {
 //     use super::prelude::*;
@@ -60,46 +60,46 @@ pub mod prelude {
 //             }
 //         }
 //     }
-
-    // #[test]
-    // fn should_automatically_handle_markers() {
-    //     let mut app = App::new();
-    //     app.add_enum_filter::<TestEnum>();
-    //     let entity = app.world_mut().spawn_empty().id();
-    //
-    //     app.update();
-    //
-    //     let total_components = app.world().entity(entity).archetype().components().len();
-    //     assert_eq!(0, total_components);
-    //     assert!(!app
-    //         .world()
-    //         .entity(entity)
-    //         .contains::<test_enum_filters::Tuple>());
-    //
-    //     app.world_mut().entity_mut(entity).insert(TestEnum::Tuple(123));
-    //
-    //     app.update();
-    //
-    //     let total_components = app.world().entity(entity).archetype().components().len();
-    //     assert_eq!(2, total_components);
-    //     assert!(app
-    //         .world()
-    //         .entity(entity)
-    //         .contains::<test_enum_filters::Tuple>());
-    //
-    //     app.world_mut().entity_mut(entity).insert(TestEnum::Unit);
-    //
-    //     app.update();
-    //
-    //     let total_components = app.world().entity(entity).archetype().components().len();
-    //     assert_eq!(2, total_components);
-    //     assert!(!app
-    //         .world()
-    //         .entity(entity)
-    //         .contains::<test_enum_filters::Tuple>());
-    //     assert!(app
-    //         .world()
-    //         .entity(entity)
-    //         .contains::<test_enum_filters::Unit>());
-    // }
+//
+//     #[test]
+//     fn should_automatically_handle_markers() {
+//         let mut app = App::new();
+//         app.add_enum_filter::<TestEnum>();
+//         let entity = app.world_mut().spawn_empty().id();
+//
+//         app.update();
+//
+//         let total_components = app.world().entity(entity).archetype().components().len();
+//         assert_eq!(0, total_components);
+//         assert!(!app
+//             .world()
+//             .entity(entity)
+//             .contains::<test_enum_filters::Tuple>());
+//
+//         app.world_mut().entity_mut(entity).insert(TestEnum::Tuple(123));
+//
+//         app.update();
+//
+//         let total_components = app.world().entity(entity).archetype().components().len();
+//         assert_eq!(2, total_components);
+//         assert!(app
+//             .world()
+//             .entity(entity)
+//             .contains::<test_enum_filters::Tuple>());
+//
+//         app.world_mut().entity_mut(entity).insert(TestEnum::Unit);
+//
+//         app.update();
+//
+//         let total_components = app.world().entity(entity).archetype().components().len();
+//         assert_eq!(2, total_components);
+//         assert!(!app
+//             .world()
+//             .entity(entity)
+//             .contains::<test_enum_filters::Tuple>());
+//         assert!(app
+//             .world()
+//             .entity(entity)
+//             .contains::<test_enum_filters::Unit>());
+//     }
 // }

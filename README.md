@@ -39,7 +39,7 @@ fn main() {
 Add the following to the `[dependencies]` section of your `Cargo.toml`.
 
 ```text
-bevy_enum_filter = "0.3.0"
+bevy_enum_filter_updated = { git = "https://github.com/ltsoveranakin/bevy_enum_filter_updated.git" }
 ```
 
 ## 🤨 How it works

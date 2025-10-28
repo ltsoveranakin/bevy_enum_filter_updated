@@ -56,7 +56,7 @@ pub fn derive_enum_filter(item: TokenStream) -> TokenStream {
     let vis = &input.vis;
     let ident = &input.ident;
     let mod_ident = get_mod_ident(ident);
-    let bevy_enum_filter = get_crate("bevy_enum_filter");
+    let bevy_enum_filter_updated = get_crate("bevy_enum_filter_updated");
     let bevy = get_crate("bevy");
 
     let variants = data
@@ -79,7 +79,7 @@ pub fn derive_enum_filter(item: TokenStream) -> TokenStream {
     let (impl_generics, ty_generics, where_clause) = &input.generics.split_for_impl();
 
     TokenStream::from(quote! {
-        impl #impl_generics #bevy_enum_filter::EnumFilter for #ident #ty_generics #where_clause {
+        impl #impl_generics #bevy_enum_filter_updated::EnumFilter for #ident #ty_generics #where_clause {
             fn set_marker(commands: &mut #bevy::ecs::system::EntityCommands, value: &Self) {
                 #(if matches!(value, #ident::#variants{..}) {
                     let entity = commands.id();

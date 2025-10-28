@@ -1,6 +1,6 @@
 use bevy::prelude::*;
 use bevy::window::WindowResolution;
-use bevy_enum_filter::prelude::*;
+use bevy_enum_filter_updated::prelude::*;
 
 fn main() {
     App::new()

@@ -1,6 +1,6 @@
 use bevy::prelude::*;
 use bevy::window::WindowResolution;
-use bevy_enum_filter::prelude::*;
+use bevy_enum_filter_updated::prelude::*;
 
 fn main() {
     App::new()
@@ -30,7 +30,8 @@ fn main() {
 
 mod components {
     use bevy::prelude::*;
-    use bevy_enum_filter::prelude::*;
+    use bevy_enum_filter_derive::EnumFilter;
+    use bevy_enum_filter_updated::prelude::*;
 
     #[derive(Component, EnumFilter)]
     pub enum Choice {
@@ -42,7 +43,8 @@ mod components {
 
 mod systems {
     use bevy::prelude::*;
-    use bevy_enum_filter::prelude::*;
+    use bevy_enum_filter_derive::Enum;
+    use bevy_enum_filter_updated::prelude::*;
 
     // ! === Import Enum AND Filter Module === ! //
     use super::components::{choice_filters, Choice};
