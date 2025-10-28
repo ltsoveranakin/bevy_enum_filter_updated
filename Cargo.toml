@@ -1,10 +1,10 @@
 [package]
-name = "bevy_enum_filter"
+name = "bevy_enum_filter_updated"
 version = "0.3.0"
 edition = "2021"
-authors = ["Gino Valente <gino.valente.code@gmail.com>"]
+authors = ["Gino Valente <gino.valente.code@gmail.com>", "ltsoveranakin; https://github.com/ltsoveranakin (updater)"]
 description = "Filter by enum variant in Bevy queries"
-repository = "https://github.com/MrGVSV/bevy_enum_filter"
+repository = "https://github.com/ltsoveranakin/bevy_enum_filter_updated"
 license = "MIT OR Apache-2.0"
 keywords = ["bevy", "enum", "filter", "variant", "query"]
 categories = ["game-development"]
