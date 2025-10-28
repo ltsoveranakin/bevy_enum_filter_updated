@@ -85,7 +85,7 @@ pub fn derive_enum_filter(item: TokenStream) -> TokenStream {
                     let entity = commands.id();
                     let mut commands = commands.commands();
 
-                    commands.add(move |world: &mut #bevy::ecs::world::World| {
+                    commands.queue(move |world: &mut #bevy::ecs::world::World| {
                         let mut entity_mut = world.entity_mut(entity);
                         if !entity_mut.contains::<#mod_ident::#variants>() {
                             // Only insert the marker if it doesn't already exist

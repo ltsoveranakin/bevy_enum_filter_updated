@@ -1,4 +1,5 @@
 use bevy::prelude::*;
+use bevy::window::WindowResolution;
 use bevy_enum_filter::prelude::*;
 
 fn main() {
@@ -6,7 +7,7 @@ fn main() {
         .add_plugins(DefaultPlugins.set(WindowPlugin {
             primary_window: Some(Window {
                 title: "Filter Example".to_string(),
-                resolution: (100., 100.).into(),
+                resolution: WindowResolution::new(100, 100),
                 ..default()
             }),
             ..default()
@@ -26,14 +27,14 @@ enum Choice {
     C,
 }
 
-fn spawn(mut commands: Commands, input: Res<Input<KeyCode>>) {
-    if input.just_pressed(KeyCode::A) {
+fn spawn(mut commands: Commands, input: Res<ButtonInput<KeyCode>>) {
+    if input.just_pressed(KeyCode::KeyA) {
         commands.spawn((Choice::A,));
     }
-    if input.just_pressed(KeyCode::B) {
+    if input.just_pressed(KeyCode::KeyB) {
         commands.spawn((Choice::B,));
     }
-    if input.just_pressed(KeyCode::C) {
+    if input.just_pressed(KeyCode::KeyC) {
         commands.spawn((Choice::C,));
     }
 }

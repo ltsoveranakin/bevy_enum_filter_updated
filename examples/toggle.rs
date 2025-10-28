@@ -1,4 +1,5 @@
 use bevy::prelude::*;
+use bevy::window::WindowResolution;
 use bevy_enum_filter::prelude::*;
 
 fn main() {
@@ -6,7 +7,7 @@ fn main() {
         .add_plugins(DefaultPlugins.set(WindowPlugin {
             primary_window: Some(Window {
                 title: "Toggle Example".to_string(),
-                resolution: (100., 100.).into(),
+                resolution: WindowResolution::new(100, 100),
                 ..default()
             }),
             ..default()
@@ -25,7 +26,7 @@ enum Toggle {
     Off,
 }
 
-fn toggle(mut query: Query<&mut Toggle>, input: Res<Input<KeyCode>>) {
+fn toggle(mut query: Query<&mut Toggle>, input: Res<ButtonInput<KeyCode>>) {
     if input.just_pressed(KeyCode::Space) {
         for mut state in &mut query {
             match *state {
